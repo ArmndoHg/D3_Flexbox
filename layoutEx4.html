@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Layout 4</title>
+    <style>
+        html,
+        body{
+            margin: 0;
+            height: 100%;
+            color: white;
+            font-family: sans-serif;
+            
+        }
+        .container{
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+        }
+
+        .header{
+            height: 15vh;
+            background-color: black;
+        }
+
+        .article{
+            background-color: beige;
+            color: black;
+            flex-grow: 8;
+        }
+
+        .aside{
+            background-color: blue;
+            height: 100%;
+            flex-grow: 1;
+        }
+
+        .nav{
+            background-color: purple;
+            height: 100%;
+            flex-grow: 1;
+        }
+
+        .footer{
+            height: 15vh;
+            background-color: black;
+        }
+
+        .center{
+            display: flex;
+            flex-grow: 9;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+
+        <div class="header">Header</div>
+
+
+            <div class="center">
+                <div class="nav">Nav</div>
+                <div class="article">Article</div>
+                <div class="aside">Aside</div>
+            </div>
+
+
+        <div class="footer">Footer</div>
+    </div>
+    
+</body>
+</html>
