@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Layout 2</title>
+    <title>Layout 3</title>
     <style>
         html,
         body{
@@ -12,8 +12,8 @@
             height: 100%;
             color: white;
             font-family: sans-serif;
+            
         }
-        
         .container{
             display: flex;
             height: 100%;
@@ -29,15 +29,20 @@
             height: 60%;
         }
 
+        .column{
+            width: 90%;
+        }
+
         .article{
             background-color: beige;
             color: black;
-            flex-grow: 5;
+            height: 70vh;
         }
 
         .aside{
             background-color: blue;
-            flex-grow: 1;
+            height: 100%;
+            width: 20vh;
         }
 
         .nav{
@@ -67,14 +72,16 @@
     <div class="container">
         <div class="nav">Nav</div>
         <main>
-            <div class="aside">Aside</div>
             <div class="header">Header</div>
-
-                <div class="article">Article</div>
-
-            <div class="footer">Footer</div>
+            <div class="center">
+                <div class="column">
+                    <div class="article">Article</div>
+                    <div class="footer">Footer</div>
+                </div>
+                <div class="aside">Aside</div>
+            </div>
         </main>
-
+        
     </div>
     
 </body>
