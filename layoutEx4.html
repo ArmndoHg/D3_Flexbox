@@ -9,7 +9,8 @@
         html,
         body{
             margin: 0;
-            height: 100%;
+            /*height: 100%;*/
+            font-weight: bold;
             color: white;
             font-family: sans-serif;
             
@@ -17,7 +18,7 @@
         .container{
             display: flex;
             flex-direction: column;
-            height: 100%;
+            flex-wrap: nowrap;
         }
 
         .header{
@@ -28,19 +29,19 @@
         .article{
             background-color: beige;
             color: black;
-            flex-grow: 8;
+            flex-grow: 9;
         }
 
         .aside{
             background-color: blue;
             height: 100%;
-            flex-grow: 1;
+            width: 20vh;
         }
 
         .nav{
             background-color: purple;
-            height: 100%;
-            flex-grow: 1;
+            height: 85vh;
+            width: 20vh;
         }
 
         .footer{
@@ -50,7 +51,34 @@
 
         .center{
             display: flex;
-            flex-grow: 9;
+            height: 85vh;
+            width: 100%;
+        }
+
+        main{
+            display: flex;
+            height: 100%;
+        }
+        
+        @media (min-width:768px) and (max-width:1023px){
+
+            .main{
+                display: flex;
+                flex-direction: column;
+            }
+
+            .article {
+                height: 100%;
+                flex-grow: 5;
+            }
+            
+            .aside {
+                height: 100%;
+            }
+        }
+
+        @media (max-width:767px){
+
         }
     </style>
 </head>
@@ -59,16 +87,17 @@
 
         <div class="header">Header</div>
 
-
+        <main>
+            <div class="nav">Nav</div>
             <div class="center">
-                <div class="nav">Nav</div>
                 <div class="article">Article</div>
                 <div class="aside">Aside</div>
             </div>
-
+        </main>
 
         <div class="footer">Footer</div>
     </div>
+    
     
 </body>
 </html>
